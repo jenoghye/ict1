@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action=""method="get">
+<table border="1">
+	<tr>
+		<th colspan="2" align="center" >회원가입</th>
+	</tr>
+	<tr>
+		<td><label for="id"></label>아이디:</td>
+		<td><input type="text" id="id" name="id"placeholder="Input ID"></td>
+	</tr>
+	<tr>
+		<td>비밀번호:</td>
+		<td><input type="password" id="pwd" name="pwd" ></td>
+	</tr>
+	<tr>
+		<td>비밀번호체크:</td>
+		<td><input type="password" id="pwd2" name="pwd"></td>
+	</tr>
+	<tr>
+		<td>이름:</td>
+		<td><input type="text" id="name" name="name"></td>
+	</tr>
+	<tr>
+		<td>나이:</td>
+		<td><input type="text" id="age" name="age"></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center" >
+		<button type="button" onclick="checkValue()" >회원가입</button>
+		</td>
+	</tr>
+</table>
+
+</form>
+<script>
+
+function checkValue(){
+
+	
+	var idObj = document.querySelector('#id');
+	var pwdObj = document.querySelector('#pwd');
+	var pwdObj2 = document.querySelector('#pwd2');
+	var naObj = document.querySelector('#name');
+	var agObj = document.querySelector('#age');
+	
+	if(idObj.value.trim().length<5){
+		alert("id는 5글자이상")
+		idObj.value="";
+		idObj.focus();
+		return  false;
+	}
+	
+ 	if(pwdObj.value.trim().length<6){
+		alert("pwd는 6글자이상");
+		pwdObj.value="";
+		pwdObj.focus();
+		return false;
+	}
+ 
+	if(pwdObj.value!=pwdObj2.value){
+		alert("비밀번호체크를 다시해주세요");
+		pwdObj2.value="";//빈문자열초기화
+		pwdObj2.focus();
+		return false;
+	} 
+	
+	 if( naObj.value.trim().length==0){
+		alert("빈문자열은 넣을수 없습니다.");
+		naObj.value="";//빈문자열초기화
+		naObj.focus();
+		return false;
+	}
+	 
+	if( agObj.value.trim()>130){
+		alert("130살 이상은 가입불가");
+		agObj.value="";
+		agObj.focus();
+		return false;
+	}  
+	return alert("회원가입을 축하드려요");
+}
+
+</script>
+</body>
+</html>

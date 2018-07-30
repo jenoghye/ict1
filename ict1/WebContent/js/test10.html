@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div id ="rDiv"></div>
+열 갯수 : <input type="text" id="rCnt"><br>
+행 갯수 : <input type="text" id="cCnt"><br>
+<button onclick="makeTalbe()">table</button>
+
+<script>
+	function rCnt(){
+		var rCnt = document.querySelector('#rCnt');
+		return rCnt.value;
+	}	
+	
+	function cCnt(){
+		var cCnt = document.querySelector('#cCnt');
+		return cCnt.value;
+	}
+	
+	function makeTable(){
+			var rDiv = document.querySelector('#rDiv');
+			
+			var str = '<table border="1">';
+			
+			var r = parseInt(rCnt());
+			var c = parseInt(cCnt());
+			
+			for(var i = 1; i<=r; i++){
+				str +='<tr>';
+				for(var j = 1;j<=c;j++){
+					str +='<td>'+((i-1)*c+j)+'</td>';
+				}
+				str +='</tr>';
+				
+			}
+			str +='</table>';
+			rDiv.innerHTML = str;
+	}
+		
+
+
+
+</script>
+</body>
+</html>

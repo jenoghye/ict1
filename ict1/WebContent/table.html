@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>never</title>
+<link rel="shortcut icon" type="image/jpg" href="/imgs/pabi.jpeg">
+<style>
+
+	td:first-child{
+		text-align:center;
+		color:red;
+	}
+
+	.last-row{
+		text-align:center;
+		color:blue;
+	}
+	
+</style>
+</head>
+<body>
+<!-- excel -->
+<table border="5" width ="500px">
+	<tr>
+		<!-- tr 하나가 한줄 -->
+		<th>번호</th><!-- 자동 bold/metadata-->
+		<th>이름</th>
+		<th>주소</th>
+		<th>전화번호</th>
+		<th>비고</th>
+	</tr>
+	<tbody>
+	
+	<tr class="first-child">
+		<td>1</td><!-- dataset -->
+		<td>정꾹이</td>
+		<td>서울</td>
+		<td>1123-1322</td>
+		<td rowspan="3" align="center" >잘생김</td>
+
+	</tr>
+		
+	<tr>
+		<td>2</td>
+		<td>차은우</td>
+		<td>인천</td>
+		<td>123-567</td>
+				
+	</tr>
+	
+	<tr class="last-row">
+		<td>3</td>
+		<td>뽀거미</td>
+		<td>제주</td>
+		<td>123-123</td>
+		
+	</tr>
+	
+	<tr>
+		<td colspan="1" align="center" ></td>
+		<td colspan="2" align="center" ><button>이전</button></td>
+		<td colspan="2" align="center" ><button>다음</button></td>
+
+		
+	</tr>
+	
+	</tbody>
+</table>
+</body>
+</html>

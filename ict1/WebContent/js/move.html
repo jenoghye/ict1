@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="#"onclick="goPage(this)" target="_blank">네이버</a>
+<!--# default,  _blank새창!-->
+<a href="#"onclick="goPage(this)" target="_blank">다음</a>
+<a href="#test">가자</a>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<p><br>
+<a id="test">RNRN</a>
+<script>
+	var urlMap = {//object, json
+			'네이버': 'http://naver.com',
+			'다음' : 'http://daum.net'
+			//왼쪽 키 : 오른쪽 밸류
+	};
+	
+	alert(urlMap['네이버']);
+				//배열처럼, 겟안해도 대괄호로 가능(urlMap.네이버)도가능!
+										//.key값
+	alert(urlMap['다음']);
+	function goPage(aObj){
+		//aObj.href ='http://naver.com'
+		aObj.href = urlMap[aObj.innerHTML]
+		aObj.href = urlMap[aObj.innerHTML]
+/* 		alert(aObj.href);
+		alert(aObj.target);
+		alert(aObj.innerHTML); */
+	}
+</script>
+</body>
+</html>

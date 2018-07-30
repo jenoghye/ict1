@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id ="rDiv"></div>
+<button type="button" onclick="makeHtml()">테이블생성</button>
+
+<script>
+	function makeHtml(){
+		var rDiv = document.querySelector("#rDiv");
+		var str = '<table border=1>';
+		for(var i = 1; i<=4;i++){
+			str +='<tr>';
+			
+			for(var j =1; j<=4;j++){
+				
+				str +='<td>';
+				str += ((i-1)*4)+j;
+				str +='</td>';
+			}
+			
+			str +='</tr>';
+			
+		}
+		str +='</table>'
+		rDiv.innerHTML = str;
+	}
+	
+</script>
+</body>
+</html>

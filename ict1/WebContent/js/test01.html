@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+이름 : <input type="text" id="name" name="name"><br>
+취미 : <input type="text" id="hobby"name="hobby"><br>
+<button onclick="result()">입력</button><br>
+결과 : <textarea id="result"> 
+</textarea><br>
+<div class="f">난 따로 존재하는 f</div>
+<div id="rDiv">
+	<div class="f">난 첫번째 div</div>;
+	<div class="l">난 첫번째 div</div>;
+</div>
+
+
+<script>
+	function result(){
+		//var nameObj = document.querySelector('#name');
+		//id가 name인값만 가져옴, 객체 1개	
+		var inputObjs = document.querySelectorAll('input');
+		//input태그 전부다, 한개든 영개든 배열로 가져옴
+		var fDiv = document.querySelector("div.f");//div클래스안에 감싸여진f여야만함
+		alert(fDiv.innerHTML);
+		
+		alert(inputObjs.length);
+		
+		
+		for(var i=0; i<inputObjs.length;i++ ){
+			document.write((i+1)+'.' + inputObjs[i].value+'<br>');
+		}
+		alert(inputObjs[i].value);
+		//alert(nameObj.value);
+		
+		
+	}
+
+
+	
+	
+	/* var s = 'asdf';
+	var name = prompt('what's ur name','');
+	
+	이름을 쓰면 name에 대입
+ 	alert(name+'반가버요');
+	 document.write("뽀거미쀼"); 
+	var str = '취미가 뭐죠?';
+	var hobbies = prompt(str,'');
+	var hobs = hobbies.split(',');
+	console.log(hobs);//배열을 만들어서 리턴하는것 
+	
+	document.write(name+'너의취미는<br>');
+	for(var i = 0;i<hobs.length;i++){
+		document.write((i+1)+'.' + hobs[i]+'<br>');
+		
+		
+		
+		var nameObj = document.getElementById('name');
+		var hobbyObj = document.getElementById('hobby');
+		var hobs = hobbyObj.value.split(',');
+		var str = nameObj.value;
+		str += '님안녕하세요.\r\n당신의 취미는';//<br>하면 출력 되기때문에 \r\n이것으로 엔터값
+		
+		var str1 = hobbyObj.value;
+		str += str1;
+		var resultObj = document.getElementById('result');
+		resultObj.value = str;
+	} */
+	
+</script>
+</body>
+</html>
